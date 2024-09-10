@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTN a un click</title>
+    <style>
+        body {
+            background-image: url('citien.jpg.jpg');
+            background-size: cover; /* Cambiado a cover para mejor ajuste en diferentes tamaños */
+            background-attachment: fixed;
+            margin: 0;
+            font-family: Arial, sans-serif; /* Agregado para una fuente consistente en todo el sitio */
+        }   
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #9bbefa;
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Asegura que el header siempre esté en la parte superior */
+        }
+
+        header img {
+            max-width: 60px;
+            max-height: 60px;
+        }
+
+        span {
+            margin: 10px;
+            color: #000000;
+            text-shadow: 4px 4px 4px rgba(73, 121, 204, 0.7);
+        }
+
+        a {
+            text-decoration: none;
+            color: #17515c;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            background-color: #d4e2fa;
+            border-radius: 10px;
+            box-shadow: 0px 8px 16px rgba(155, 190, 250, 0.5);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 20px;
+            gap: 20px; /* Agregado para espacio entre columnas */
+        }
+
+        .column {
+            flex: 1;
+            min-width: 300px; /* Añadido para mejorar el diseño en pantallas pequeñas */
+            padding: 20px;
+            background-color: rgba(155, 190, 250, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            font-family: Georgia, serif;
+        }
+
+        .column h1 {
+            font-size: 24px; /* Ajustado para ser más legible en dispositivos móviles */
+            margin-bottom: 10px;
+        }
+
+        .column p {
+            font-size: 16px; /* Ajustado para mejorar la legibilidad en pantallas pequeñas */
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .columna {
+            background-color: rgba(155, 190, 250, 1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            padding: 20px;
+            margin: 10px;
+            font-size: 20px;
+        }
+
+        b {
+            color: #132340;
+        }
+
+        footer {
+            display: flex;
+            flex-wrap: wrap; /* Añadido para mejorar el diseño en pantallas pequeñas */
+            background-color: #9bbefa;
+            color: #000000;
+            text-align: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+            justify-content: center;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer li {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #17515c;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+       <img src="ctn.jpg" alt="Logo">
+        <div class="dropdown">
+            <span><strong>ESPECIALIDADES</strong></span>
+            <div class="dropdown-content">
+                <a href="QCA.html">QUÍMICA INDUSTRIAL</a>
+                <a href="EMK.html">ELECTROMECÁNICA</a>
+                <a href="INFOR.html">INFORMÁTICA</a>
+                <a href="MKA.html">MECATRÓNICA</a>
+                <a href="CC.html">CONSTRUCCIONES CIVILES</a>
+                <a href="MCA.html">MECÁNICA AUTOMOTRIZ</a>
+                <a href="EDAD.html">ELECTRICIDAD</a>
+                <a href="ECA.html">ELECTRÓNICA</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <span><strong>ESCOLAR BÁSICA</strong></span>
+            <div class="dropdown-content">
+                <a href="SEEB.html">7º GRADO</a>
+                <a href="OEEB.html">8º GRADO</a>
+                <a href="NEEB.html">9º GRADO</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <span><strong>FORMACIÓN PROFESIONAL</strong></span>
+            <div class="dropdown-content">
+                <a href="MGFP.html">MECÁNICA GENERAL</a>
+                <a href="MCAFP.html">MECÁNICA AUTOMOTRIZ</a>
+                <a href="EDADFP.html">ELECTRICIDAD</a>
+                <a href="CRPFP.html">CARPINTERIA</a>
+                <a href="RFGFP.html">REFRIGERACION</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <span><strong>QUIÉNES SOMOS</strong></span>
+            <div class="dropdown-content">
+                <a href="HSA.html">HISTORIAL</a>
+                <a href="O.html">OBJETIVOS</a>
+                <a href="I.html">PRE-INSCRIPCIÓN</a>
+                <a href="EXPO.html">EXPOCIENTEC</a>
+                <a href="ORI.html">ORIENTACIÓN</a>
+                 <a href="LEE.html">CTN LEE</a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="columna">
+        <p><b>COLEGIO TÉCNICO NACIONAL Y CENTRO DE ENTRENAMIENTO VOCACIONAL<br> "Arq. Raúl María Benítez Perdomo"</b></p>
+    </div>
+    
+    <main>
+        <div class="column">
+            <h1>Misión</h1>
+            <p>Somos una institución que apunta al desarrollo humano incluyente e integral, caracterizada por la vivencia de valores, principios y cualidades éticas promoviendo una educación de calidad con tecnología, de formación técnica con una modalidad variada, que estimula el desarrollo de las competencias básicas, tecnológicas, comunicativas y laborales del alumno, dentro del contexto social, económico de la región, capaz de asumir las exigencias del mercado ocupacional y los desafíos que presenta una sociedad dinámica en permanente proceso de avances tecnológicos y cambios culturales.</p>
+        </div>
+        <div class="column">
+            <h1>Visión</h1>
+            <p>Ser una institución educativa líder en Educación Técnica y de Formación Profesional para la formación de los alumnos, basado en la excelencia académica a fin de asumir las exigencias del mercado ocupacional y los desafíos de una sociedad dinámica y pluricultural.</p>
+        </div>
+    </main>
+    
+    <footer>
+        <ul>
+            <li><a href="tel:0207254">0207 254</a></li>
+            <li><a href="mailto:info@ctne.edu.py">info@ctne.edu.py</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
